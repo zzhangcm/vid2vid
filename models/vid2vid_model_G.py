@@ -150,6 +150,7 @@ class Vid2VidModelG(BaseModel):
             net_id = gpu_id if self.split_gpus else 0                                           # the GPU idx where the net is located
             fake_B_feat = flow_feat = fake_B_fg_feat = None
 
+            print("t: ", t, n_frames_load)
             # coarse-to-fine approach
             for s in range(n_scales):
                 si = n_scales-1-s
@@ -184,11 +185,18 @@ class Vid2VidModelG(BaseModel):
                 
                 # collect results into a sequence
                 fake_B_pyr[si] = self.concat([fake_B_pyr[si], fake_B.unsqueeze(1).cuda(dest_id)], dim=1)                                
-                if s == n_scales-1:                    
+                if s == n_scales-1:
+                    # print("n_scales value: ", n_scales)
+                    # print("="*10, " Debug ", "="*10)
+                    # print("fake_Bs_raw type: ", type(fake_Bs_raw))
+                    # print("fake_B_raw type: ", type(fake_B_raw))
+                    # print("fake_B_raw value: ", fake_B_raw)
+                    # print("fake_Bs_raw value: ", fake_Bs_raw)
+                    # print("dest_id: ", dest_id)
                     fake_Bs_raw = self.concat([fake_Bs_raw, fake_B_raw.unsqueeze(1).cuda(dest_id)], dim=1)
                     if flow is not None:
                         flows = self.concat([flows, flow.unsqueeze(1).cuda(dest_id)], dim=1)
-                        weights = self.concat([weights, weight.unsqueeze(1).cuda(dest_id)], dim=1)                        
+                        weights = self.concat([weights, weight.unsqueeze(1).cuda(dest_id)], dim=1)
         
         return fake_B_pyr, fake_Bs_raw, flows, weights
 

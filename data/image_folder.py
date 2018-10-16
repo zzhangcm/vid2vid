@@ -14,7 +14,7 @@ import os.path
 IMG_EXTENSIONS = [
     '.jpg', '.JPG', '.jpeg', '.JPEG', '.pgm', '.PGM',
     '.png', '.PNG', '.ppm', '.PPM', '.bmp', '.BMP', '.tiff', 
-    '.txt', '.json'
+    '.txt', '.json', '.h5'
 ]
 
 

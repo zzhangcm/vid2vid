@@ -79,11 +79,16 @@ def train():
 
             # whether to collect output images
             save_fake = total_steps % opt.display_freq == 0
-                    
-            _, n_frames_total, height, width = data['B'].size()  # n_frames_total = n_frames_load * n_loadings + tG - 1        
+
+            print(data['B'].size())
+            _, n_frames_total, height, width = data['B'].size()  # n_frames_total = n_frames_load * n_loadings + tG - 1
+            print("n_frames_total is {}".format(n_frames_total))
             n_frames_total = n_frames_total // opt.output_nc
             n_frames_load = opt.max_frames_per_gpu * n_gpus      # number of total frames loaded into GPU at a time for each batch
-            n_frames_load = min(n_frames_load, n_frames_total - tG + 1)
+            n_frames_load = max(min(n_frames_load, n_frames_total - tG + 1), 1)
+            print("max_frames_per_gpu is {}, n_gpus is {}, n_frames_load is {}, n_frames_total is {}, tG is {}".format(
+                opt.max_frames_per_gpu, n_gpus, n_frames_load, n_frames_total, tG
+            ))
             t_len = n_frames_load + tG - 1                       # number of loaded frames plus previous frames
 
             fake_B_last = None  # the last generated frame from previous training batch (which becomes input to the next batch)

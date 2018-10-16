@@ -67,7 +67,7 @@ class BaseModel(torch.nn.Module):
         if not os.path.isfile(save_path):
             print('%s not exists yet!' % save_path)
             if 'G0' in network_label:
-                raise('Generator must exist!')
+                raise('Generator must exist! {}'.format(save_path))
         else:
             #network.load_state_dict(torch.load(save_path))
             try:

@@ -70,6 +70,7 @@ class TemporalDataset(BaseDataset):
             A_scaled *= 255.0
         return A_scaled
 
+
     def __len__(self):
         return len(self.A_paths)
 

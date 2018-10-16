@@ -9,7 +9,7 @@ import numpy as np
 import torch.nn.functional as F
 import copy
 
-from .flownet2_pytorch.networks.resample2d_package.resample2d import Resample2d
+from .flownet2_pytorch.networks.resample2d_package.modules.resample2d import Resample2d
 
 ###############################################################################
 # Functions

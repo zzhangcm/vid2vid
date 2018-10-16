@@ -1,0 +1,103 @@
+------------ Options -------------
+TTUR: False
+add_face_disc: False
+batchSize: 1
+beta1: 0.5
+checkpoints_dir: ./checkpoints
+continue_train: False
+dataroot: datasets/Cityscapes/
+dataset_mode: temporal
+debug: False
+densepose_only: False
+display_freq: 100
+display_id: 0
+display_winsize: 512
+feat_num: 3
+fg: False
+fg_labels: [26]
+fineSize: 512
+gan_mode: ls
+gpu_ids: [0, 1, 2, 3]
+input_nc: 3
+isTrain: True
+label_feat: False
+label_nc: 35
+lambda_F: 10.0
+lambda_T: 10.0
+lambda_feat: 10.0
+loadSize: 512
+load_features: False
+load_pretrain: 
+lr: 0.0002
+max_dataset_size: inf
+max_frames_backpropagate: 1
+max_frames_per_gpu: 2
+max_t_step: 1
+model: vid2vid
+nThreads: 2
+n_blocks: 9
+n_blocks_local: 3
+n_downsample_E: 3
+n_downsample_G: 3
+n_frames_D: 3
+n_frames_G: 3
+n_frames_total: 3
+n_gpus_gen: 2
+n_layers_D: 3
+n_local_enhancers: 1
+n_scales_spatial: 1
+n_scales_temporal: 3
+name: label2city_512_no_fg
+ndf: 64
+nef: 32
+netE: simple
+netG: composite
+ngf: 128
+niter: 10
+niter_decay: 10
+niter_fix_global: 0
+niter_step: 5
+no_canny_edge: False
+no_dist_map: False
+no_first_img: False
+no_flip: False
+no_flow: False
+no_ganFeat: False
+no_html: False
+no_vgg: False
+norm: batch
+num_D: 2
+openpose_only: False
+output_nc: 3
+phase: train
+pool_size: 1
+print_freq: 100
+random_drop_prob: 0.2
+remove_face_labels: False
+resize_or_crop: scaleWidth
+save_epoch_freq: 1
+save_latest_freq: 1000
+serial_batches: False
+tf_log: False
+use_instance: True
+use_single_G: False
+which_epoch: latest
+-------------- End ----------------
+CustomDatasetDataLoader
+dataset [TemporalDataset] was created
+#training videos = 6
+vid2vid
+---------- Networks initialized -------------
+-----------------------------------------------
+---------- Networks initialized -------------
+-----------------------------------------------
+create web directory ./checkpoints/label2city_512_no_fg/web...
+<class 'NoneType'>
+tensor([[[[ 0.7201,  0.4717,  0.5797,  ...,  0.2187,  0.6767,  0.5144],
+          [ 0.1996,  0.9403,  0.5335,  ...,  0.5398,  0.7457,  0.6346],
+          [ 0.5415,  0.6702,  0.6077,  ...,  0.3365,  0.4166,  0.4621],
+          ...,
+          [ 0.5296,  0.6395,  0.4047,  ...,  0.6037,  0.4414,  0.5912],
+          [ 0.2936,  0.5771,  0.2600,  ...,  0.5053,  0.4795,  0.5439],
+          [ 0.6406,  0.6400,  0.4630,  ...,  0.5374,  0.4931,  0.6063]]]], device='cuda:1')
+<class 'torch.Tensor'>

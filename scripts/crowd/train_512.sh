@@ -1,0 +1,1 @@
+~/sfuab/anaconda3/bin/python train.py --name img2dst_512 --input_nc 3 --loadSize 480 --n_scales_spatial 2 --gpu_ids 0,1,2,3 --n_gpus_gen 2 --niter_step 2 --niter_fix_global 10 --dataroot ../mall_dataset
