@@ -189,9 +189,10 @@ class CompositeGenerator(nn.Module):
         else:
             print("mask2:{}\t@{}".format(mask, mask.get_device()))
             print("img_prev:{}\t@{}".format(img_prev, img_prev.get_device()))
-            print("flow:{}\t@{}".format(flow, flow.get_device()))
+            imgpre_slc = img_prev[:,-3:,...].cuda(gpu_id)
+            print("imgpre_slc:{}\t@{}".format(imgpre_slc, img_prev.get_device()))
 
-            img_warp = self.resample(img_prev[:,-3:,...].cuda(gpu_id), flow)
+            img_warp = self.resample(imgpre_slc, flow)
             print("img_warp1:{}\t@{}".format(img_warp, img_warp.get_device()))
             img_warp = img_warp.cuda(gpu_id)
             print("img_warp2:{}\t@{}".format(img_warp, img_warp.get_device()))
