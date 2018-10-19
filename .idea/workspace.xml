@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a7a0fa2c-f6e2-4e75-bdda-1d987c0e4c8e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/vid2vid_model_G.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/vid2vid_model_G.py" afterDir="false" />
-    </list>
+    <list default="true" id="a7a0fa2c-f6e2-4e75-bdda-1d987c0e4c8e" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -78,8 +75,8 @@
       <file leaf-file-name="vid2vid_model_G.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/models/vid2vid_model_G.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1188">
-              <caret line="170" column="35" selection-start-line="161" selection-start-column="30" selection-end-line="170" selection-end-column="35" />
+            <state relative-caret-position="1254">
+              <caret line="171" column="63" selection-start-line="171" selection-start-column="63" selection-end-line="171" selection-end-column="63" />
             </state>
           </provider>
         </entry>
@@ -279,7 +276,21 @@
       <option name="project" value="LOCAL" />
       <updated>1539955731524</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="test">
+      <created>1539955931370</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1539955931370</updated>
+    </task>
+    <task id="LOCAL-00013" summary="test">
+      <created>1539956117494</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1539956117494</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -425,8 +436,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/models/vid2vid_model_G.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1188">
-          <caret line="170" column="35" selection-start-line="161" selection-start-column="30" selection-end-line="170" selection-end-column="35" />
+        <state relative-caret-position="1254">
+          <caret line="171" column="63" selection-start-line="171" selection-start-column="63" selection-end-line="171" selection-end-column="63" />
         </state>
       </provider>
     </entry>

@@ -169,7 +169,7 @@ class Vid2VidModelG(BaseModel):
                 # 3. mask for foreground and whether to use warped previous image
                 mask_F = self.compute_mask(real_As, t+tG-1) if self.opt.fg else None
                 if mask_F.get_device() != gpu_id:
-                    mask_F = mask_F.to(torch.cuda.device(gpu_id))
+                    mask_F = mask_F.to(torch.device(type="cuda",index=gpu_id))
                 print("gpu_id: {}".format(gpu_id))
                 print("real_As_reshaped:{}".format(real_As_reshaped.get_device()))
                 print("mask:{}".format(mask_F.get_device()))
