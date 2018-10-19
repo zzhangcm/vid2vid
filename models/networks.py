@@ -200,7 +200,7 @@ class CompositeGenerator(nn.Module):
             img_fg_feat = self.indv_up(self.indv_res(self.indv_down(input)))
             img_fg = self.indv_final(img_fg_feat)
             print("mask5:{}\t@{}".format(mask.shape, mask.get_device()))
-            return
+
 
             # mask_device = mask.get_device()
             # if (mask_device <=1 and gpu_id >1) or (mask_device >1 and gpu_id <=1):
