@@ -168,8 +168,9 @@ class CompositeGenerator(nn.Module):
             self.model_final_w = nn.Sequential(*model_final_w)
 
     def forward(self, input, img_prev, mask, img_feat_coarse, flow_feat_coarse, img_fg_feat_coarse, use_raw_only):
-        print("mask:{}".format(mask))
+        # print("mask:{}".format(mask))
         downsample = self.model_down_seg(input) + self.model_down_img(img_prev)
+        print("downsample:{}".format(downsample))
         img_feat = self.model_up_img(self.model_res_img(downsample))
         img_raw = self.model_final_img(img_feat)
 
@@ -181,7 +182,6 @@ class CompositeGenerator(nn.Module):
             weight = self.model_final_w(flow_feat)  
 
         gpu_id = img_feat.get_device()
-        # print("gpu_id: {}".format(gpu_id))
         if use_raw_only or self.no_flow:
             img_final = img_raw
         else:
