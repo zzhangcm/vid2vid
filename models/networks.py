@@ -192,6 +192,7 @@ class CompositeGenerator(nn.Module):
             img_fg_feat = self.indv_up(self.indv_res(self.indv_down(input)))
             img_fg = self.indv_final(img_fg_feat)
             print("gpu_id:{}".format(gpu_id))
+            print("mask:{}".format(mask))
             mask = mask.cuda(gpu_id).expand_as(img_raw)            
             img_final = img_fg * mask + img_final * (1-mask) 
             img_raw = img_fg * mask + img_raw * (1-mask)                 
