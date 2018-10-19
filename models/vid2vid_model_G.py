@@ -172,7 +172,7 @@ class Vid2VidModelG(BaseModel):
                     mask_F = mask_F.to(torch.device(type="cuda",index=gpu_id))
                 print("gpu_id: {}".format(gpu_id))
                 print("real_As_reshaped:{}".format(real_As_reshaped.get_device()))
-                print("mask:{}".format(mask_F.get_device()))
+                print("mask:{}".format(mask_F))
                 use_raw_only = self.opt.no_first_img and is_first_frame 
 
                 ### network forward                                                
