@@ -198,7 +198,9 @@ class CompositeGenerator(nn.Module):
             img_fg = self.indv_final(img_fg_feat)
             mask_device = mask.get_device()
             if (mask_device <=1 and gpu_id >1) or (mask_device >1 and gpu_id <=1):
-                mask = mask.to(torch.device("cpu")).cuda(gpu_id).expand_as(img_raw)
+                mask = mask.to(torch.device("cpu"))
+                mask = mask.cuda(gpu_id)
+                mask = mask.expand_as(img_raw)
             mask = mask.cuda(gpu_id).expand_as(img_raw)
             print("pass mask")
             img_final = img_fg * mask + img_final * (1-mask) 
