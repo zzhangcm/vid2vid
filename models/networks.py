@@ -180,6 +180,7 @@ class CompositeGenerator(nn.Module):
             weight = self.model_final_w(flow_feat)  
 
         gpu_id = img_feat.get_device()
+        print("gpu_id: {}".format(gpu_id))
         if use_raw_only or self.no_flow:
             img_final = img_raw
         else:
