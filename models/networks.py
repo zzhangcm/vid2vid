@@ -174,7 +174,6 @@ class CompositeGenerator(nn.Module):
         img_feat = self.model_up_img(self.model_res_img(downsample))
         print("img_feat:{}".format(img_feat))
         img_raw = self.model_final_img(img_feat)
-        print("img_raw:{}".format(img_raw))
 
         flow = weight = flow_feat = None
         if not self.no_flow:
@@ -195,6 +194,7 @@ class CompositeGenerator(nn.Module):
         if self.use_fg_model:
             img_fg_feat = self.indv_up(self.indv_res(self.indv_down(input)))
             img_fg = self.indv_final(img_fg_feat)
+            print("img_raw:{}".format(img_raw))
             mask = mask.cuda(gpu_id).expand_as(img_raw)            
             img_final = img_fg * mask + img_final * (1-mask) 
             img_raw = img_fg * mask + img_raw * (1-mask)                 
