@@ -174,6 +174,8 @@ class CompositeGenerator(nn.Module):
         img_feat = self.model_up_img(self.model_res_img(downsample))
         # print("img_feat:{}".format(img_feat))
         img_raw = self.model_final_img(img_feat)
+        if self.use_fg_model:
+            mask = mask.cuda(gpu_id).expand_as(img_raw)
         print("img_raw:{},\t@{}".format(img_raw.shape,img_raw.get_device()))
         print("mask:{}\t@{}".format(mask,mask.get_device()))
 
@@ -208,7 +210,7 @@ class CompositeGenerator(nn.Module):
             #     mask = mask.cuda(gpu_id)
             #     mask = mask.expand_as(img_raw)
 
-            mask = mask.cuda(gpu_id).expand_as(img_raw)
+            # mask = mask.cuda(gpu_id).expand_as(img_raw)
             print("pass mask")
             img_final = img_fg * mask + img_final * (1-mask) 
             img_raw = img_fg * mask + img_raw * (1-mask)                 
