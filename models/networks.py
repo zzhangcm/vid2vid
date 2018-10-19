@@ -170,9 +170,9 @@ class CompositeGenerator(nn.Module):
     def forward(self, input, img_prev, mask, img_feat_coarse, flow_feat_coarse, img_fg_feat_coarse, use_raw_only):
         # print("mask:{}".format(mask))
         downsample = self.model_down_seg(input) + self.model_down_img(img_prev)
-        print("downsample:{}".format(downsample))
+        # print("downsample:{}".format(downsample))
         img_feat = self.model_up_img(self.model_res_img(downsample))
-        print("img_feat:{}".format(img_feat))
+        # print("img_feat:{}".format(img_feat))
         img_raw = self.model_final_img(img_feat)
 
         flow = weight = flow_feat = None
