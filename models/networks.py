@@ -172,7 +172,9 @@ class CompositeGenerator(nn.Module):
         downsample = self.model_down_seg(input) + self.model_down_img(img_prev)
         print("downsample:{}".format(downsample))
         img_feat = self.model_up_img(self.model_res_img(downsample))
+        print("img_feat:{}".format(img_feat))
         img_raw = self.model_final_img(img_feat)
+        print("img_raw:{}".format(img_raw))
 
         flow = weight = flow_feat = None
         if not self.no_flow:

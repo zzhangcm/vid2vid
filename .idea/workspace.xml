@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a7a0fa2c-f6e2-4e75-bdda-1d987c0e4c8e" name="Default" comment="test">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="a7a0fa2c-f6e2-4e75-bdda-1d987c0e4c8e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/models/networks.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/networks.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/vid2vid_model_G.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/vid2vid_model_G.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -88,8 +86,8 @@
       <file leaf-file-name="networks.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/models/networks.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
-              <caret line="170" column="35" selection-start-line="170" selection-start-column="35" selection-end-line="170" selection-end-column="35" />
+            <state relative-caret-position="627">
+              <caret line="171" column="34" selection-start-line="171" selection-start-column="34" selection-end-line="171" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -112,8 +110,8 @@
         <option value="$PROJECT_DIR$/scripts/street/download_models_g1.py" />
         <option value="$PROJECT_DIR$/scripts/face/download_models.py" />
         <option value="$PROJECT_DIR$/scripts/__init__.py" />
-        <option value="$PROJECT_DIR$/models/networks.py" />
         <option value="$PROJECT_DIR$/models/vid2vid_model_G.py" />
+        <option value="$PROJECT_DIR$/models/networks.py" />
       </list>
     </option>
   </component>
@@ -308,7 +306,14 @@
       <option name="project" value="LOCAL" />
       <updated>1539956400328</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="test">
+      <created>1539956539711</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1539956539711</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -454,8 +459,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/models/networks.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="170" column="35" selection-start-line="170" selection-start-column="35" selection-end-line="170" selection-end-column="35" />
+        <state relative-caret-position="627">
+          <caret line="171" column="34" selection-start-line="171" selection-start-column="34" selection-end-line="171" selection-end-column="34" />
         </state>
       </provider>
     </entry>
