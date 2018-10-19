@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../CSRNet-pytorch/.idea/CSRNet-pytorch.iml" filepath="$PROJECT_DIR$/../CSRNet-pytorch/.idea/CSRNet-pytorch.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../mall_dataset/.idea/mall_dataset.iml" filepath="$PROJECT_DIR$/../mall_dataset/.idea/mall_dataset.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/vid2vid.iml" filepath="$PROJECT_DIR$/.idea/vid2vid.iml" />
     </modules>
   </component>
