@@ -147,6 +147,7 @@ class Vid2VidModelG(BaseModel):
         ### sequentially generate each frame
         for t in range(n_frames_load):
             gpu_id = (t // self.n_frames_per_gpu + start_gpu) if self.split_gpus else start_gpu # the GPU idx where we generate this frame
+            print("gpu_id: {}".format(gpu_id))
             net_id = gpu_id if self.split_gpus else 0                                           # the GPU idx where the net is located
             fake_B_feat = flow_feat = fake_B_fg_feat = None
 
