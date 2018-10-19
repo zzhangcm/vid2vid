@@ -168,6 +168,7 @@ class Vid2VidModelG(BaseModel):
                 
                 # 3. mask for foreground and whether to use warped previous image
                 mask_F = self.compute_mask(real_As, t+tG-1) if self.opt.fg else None
+                print("real_As_reshaped:{}".format(real_As_reshaped))
                 print("mask:{}".format(mask_F))
                 use_raw_only = self.opt.no_first_img and is_first_frame 
 
