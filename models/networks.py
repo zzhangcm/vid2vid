@@ -199,7 +199,7 @@ class CompositeGenerator(nn.Module):
             # print("mask4:{}\t@{}".format(mask.shape, mask.get_device()))
             img_fg_feat = self.indv_up(self.indv_res(self.indv_down(input)))
             img_fg = self.indv_final(img_fg_feat)
-            print("mask5:{}\t@{}".format(mask.shape, mask.get_device()))
+            print("mask5:{}\t@{}".format(mask, mask.get_device()))
 
 
             # mask_device = mask.get_device()
