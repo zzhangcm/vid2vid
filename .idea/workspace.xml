@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a7a0fa2c-f6e2-4e75-bdda-1d987c0e4c8e" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/networks.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/networks.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/vid2vid_model_G.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/vid2vid_model_G.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -74,20 +76,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="vid2vid_model_G.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="vid2vid_model_G.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/models/vid2vid_model_G.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="429">
-              <caret line="177" column="69" lean-forward="true" selection-start-line="177" selection-start-column="69" selection-end-line="177" selection-end-column="69" />
+            <state relative-caret-position="792">
+              <caret line="170" column="45" selection-start-line="170" selection-start-column="45" selection-end-line="170" selection-end-column="45" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="networks.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="networks.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/networks.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1188">
-              <caret line="194" column="39" selection-start-line="194" selection-start-column="39" selection-end-line="194" selection-end-column="39" />
+            <state relative-caret-position="1056">
+              <caret line="175" column="26" selection-start-line="175" selection-start-column="26" selection-end-line="175" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -111,6 +113,7 @@
         <option value="$PROJECT_DIR$/scripts/face/download_models.py" />
         <option value="$PROJECT_DIR$/scripts/__init__.py" />
         <option value="$PROJECT_DIR$/models/networks.py" />
+        <option value="$PROJECT_DIR$/models/vid2vid_model_G.py" />
       </list>
     </option>
   </component>
@@ -214,7 +217,28 @@
       <option name="project" value="LOCAL" />
       <updated>1539953836626</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="test">
+      <created>1539954486571</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1539954486571</updated>
+    </task>
+    <task id="LOCAL-00004" summary="test">
+      <created>1539954599393</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1539954599393</updated>
+    </task>
+    <task id="LOCAL-00005" summary="test">
+      <created>1539954830508</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1539954830508</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -351,17 +375,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/vid2vid_model_G.py">
+    <entry file="file://$PROJECT_DIR$/models/networks.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="429">
-          <caret line="177" column="69" lean-forward="true" selection-start-line="177" selection-start-column="69" selection-end-line="177" selection-end-column="69" />
+        <state relative-caret-position="1056">
+          <caret line="175" column="26" selection-start-line="175" selection-start-column="26" selection-end-line="175" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/networks.py">
+    <entry file="file://$PROJECT_DIR$/models/vid2vid_model_G.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1188">
-          <caret line="194" column="39" selection-start-line="194" selection-start-column="39" selection-end-line="194" selection-end-column="39" />
+        <state relative-caret-position="792">
+          <caret line="170" column="45" selection-start-line="170" selection-start-column="45" selection-end-line="170" selection-end-column="45" />
         </state>
       </provider>
     </entry>
