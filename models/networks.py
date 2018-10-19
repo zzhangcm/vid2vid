@@ -175,7 +175,7 @@ class CompositeGenerator(nn.Module):
         # print("img_feat:{}".format(img_feat))
         img_raw = self.model_final_img(img_feat)
         print("img_raw:{},\t@{}".format(img_raw.shape,img_raw.get_device()))
-        # print("mask:{}\t@{}".format(mask.shape,mask.get_device()))
+        print("mask:{}\t@{}".format(mask,mask.get_device()))
 
         flow = weight = flow_feat = None
         if not self.no_flow:
@@ -183,7 +183,7 @@ class CompositeGenerator(nn.Module):
             flow_feat = self.model_up_flow(res_flow)                                                              
             flow = self.model_final_flow(flow_feat) * 20
             weight = self.model_final_w(flow_feat)
-        # print("mask2:{}\t@{}".format(mask.shape, mask.get_device()))
+        print("mask2:{}\t@{}".format(mask, mask.get_device()))
 
         gpu_id = img_feat.get_device()
         if use_raw_only or self.no_flow:
@@ -192,11 +192,11 @@ class CompositeGenerator(nn.Module):
             img_warp = self.resample(img_prev[:,-3:,...].cuda(gpu_id), flow).cuda(gpu_id)        
             weight_ = weight.expand_as(img_raw)
             img_final = img_raw * weight_ + img_warp * (1-weight_)
-        # print("mask3:{}\t@{}".format(mask.shape, mask.get_device()))
+        print("mask3:{}\t@{}".format(mask, mask.get_device()))
         
         img_fg_feat = None
         if self.use_fg_model:
-            # print("mask4:{}\t@{}".format(mask.shape, mask.get_device()))
+            print("mask4:{}\t@{}".format(mask.shape, mask.get_device()))
             img_fg_feat = self.indv_up(self.indv_res(self.indv_down(input)))
             img_fg = self.indv_final(img_fg_feat)
             print("mask5:{}\t@{}".format(mask, mask.get_device()))
