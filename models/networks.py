@@ -173,6 +173,7 @@ class CompositeGenerator(nn.Module):
         # print("downsample:{}".format(downsample))
         img_feat = self.model_up_img(self.model_res_img(downsample))
         # print("img_feat:{}".format(img_feat))
+        gpu_id = img_feat.get_device()
         img_raw = self.model_final_img(img_feat)
         if self.use_fg_model:
             mask = mask.cuda(gpu_id).expand_as(img_raw)
@@ -187,7 +188,7 @@ class CompositeGenerator(nn.Module):
             weight = self.model_final_w(flow_feat)
         print("mask2:{}\t@{}".format(mask, mask.get_device()))
 
-        gpu_id = img_feat.get_device()
+
         if use_raw_only or self.no_flow:
             img_final = img_raw
         else:
