@@ -13,7 +13,7 @@ class FlowNet(BaseModel):
         # flownet 2           
         from .flownet2_pytorch import models as flownet2_models
         from .flownet2_pytorch.utils import tools as flownet2_tools
-        from .flownet2_pytorch.networks.resample2d_package.modules.resample2d import Resample2d
+        from .flownet2_pytorch.networks.resample2d_package.resample2d import Resample2d
 
         opt.rgb_max = 255
         opt.fp16 = False

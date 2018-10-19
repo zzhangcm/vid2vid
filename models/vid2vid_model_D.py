@@ -9,8 +9,8 @@ from torch.autograd import Variable
 import util.util as util
 from .base_model import BaseModel
 from . import networks
-from .flownet2_pytorch.networks.resample2d_package.modules.resample2d import Resample2d
-
+#from .flownet2_pytorch.networks.resample2d_package.modules.resample2d import Resample2d
+from .flownet2_pytorch.networks.resample2d_package.resample2d import Resample2d
 class Vid2VidModelD(BaseModel):
     def name(self):
         return 'Vid2VidModelD'
