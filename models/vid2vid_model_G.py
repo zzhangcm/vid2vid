@@ -157,17 +157,18 @@ class Vid2VidModelG(BaseModel):
                 ### prepare inputs                
                 # 1. input labels
                 real_As = real_A_pyr[si]
-                _, _, _, h, w = real_As.size()                  
-                real_As_reshaped = real_As[:, t:t+tG,...].view(self.bs, -1, h, w).cuda(gpu_id)              
+                _, _, _, h, w = real_As.size()
+                with torch.cuda.device(gpu_id):
+                    real_As_reshaped = real_As[:, t:t+tG,...].view(self.bs, -1, h, w).cuda(gpu_id)
 
-                # 2. previous fake_Bs                
-                fake_B_prevs = fake_B_pyr[si][:, t:t+tG-1,...].cuda(gpu_id)
-                if (t % self.n_frames_bp) == 0:
-                    fake_B_prevs = fake_B_prevs.detach()
-                fake_B_prevs_reshaped = fake_B_prevs.view(self.bs, -1, h, w)
-                
-                # 3. mask for foreground and whether to use warped previous image
-                mask_F = self.compute_mask(real_As, t+tG-1) if self.opt.fg else None
+                    # 2. previous fake_Bs
+                    fake_B_prevs = fake_B_pyr[si][:, t:t+tG-1,...].cuda(gpu_id)
+                    if (t % self.n_frames_bp) == 0:
+                        fake_B_prevs = fake_B_prevs.detach()
+                    fake_B_prevs_reshaped = fake_B_prevs.view(self.bs, -1, h, w)
+
+                    # 3. mask for foreground and whether to use warped previous image
+                    mask_F = self.compute_mask(real_As, t+tG-1) if self.opt.fg else None
                 print("gpu_id: {}".format(gpu_id))
                 print("real_As_reshaped:{}".format(real_As_reshaped.get_device()))
                 print("mask:{}".format(mask_F.get_device()))
