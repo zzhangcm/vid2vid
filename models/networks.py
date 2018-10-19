@@ -174,8 +174,8 @@ class CompositeGenerator(nn.Module):
         img_feat = self.model_up_img(self.model_res_img(downsample))
         # print("img_feat:{}".format(img_feat))
         img_raw = self.model_final_img(img_feat)
-        print("img_raw:{}".format(img_raw.shape))
-        print("mask:{}".format(mask.shape))
+        print("img_raw:{},\t@{}".format(img_raw.shape,img_raw.get_device()))
+        print("mask:{}\t@{}".format(mask.shape,mask.get_device()))
 
         flow = weight = flow_feat = None
         if not self.no_flow:
