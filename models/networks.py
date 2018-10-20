@@ -87,7 +87,10 @@ class CompositeGenerator(nn.Module):
         assert(n_blocks >= 0)
         super(CompositeGenerator, self).__init__()        
         self.resample = Resample2d()
-        self.resamples = [Resample2d() for i in range(4)]
+        self.resamples = []
+        for i in range(torch.cuda.device_count()):
+            with torch.cuda.device(i):
+                self.resamples.append(Resample2d())
         self.n_downsampling = n_downsampling
         self.use_fg_model = use_fg_model
         self.no_flow = no_flow
