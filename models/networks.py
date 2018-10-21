@@ -82,12 +82,12 @@ def print_network(net):
 # Classes
 ##############################################################################
 class CompositeGenerator(nn.Module):
+    resample_gpuid = None
     def __init__(self, input_nc, output_nc, prev_output_nc, ngf, n_downsampling, n_blocks, use_fg_model=False, no_flow=False,
                 norm_layer=nn.BatchNorm2d, padding_type='reflect'):
         assert(n_blocks >= 0)
         super(CompositeGenerator, self).__init__()        
         self.resample = Resample2d()
-        self.resample_gpuid = None
         self.n_downsampling = n_downsampling
         self.use_fg_model = use_fg_model
         self.no_flow = no_flow
