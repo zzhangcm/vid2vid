@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a7a0fa2c-f6e2-4e75-bdda-1d987c0e4c8e" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/networks.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/networks.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -13,15 +14,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="train.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/train.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="19" column="32" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="test_g1_1024.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/street/test_g1_1024.sh">
           <provider selected="true" editor-type-id="text-editor">
@@ -40,25 +32,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="download_flownet2.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/download_flownet2.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="17" column="73" selection-start-line="17" selection-start-column="73" selection-end-line="17" selection-end-column="73" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="install.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/flownet2_pytorch/install.sh">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/flownet2_pytorch/__init__.py">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
@@ -95,8 +70,8 @@
       <file leaf-file-name="networks.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/models/networks.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1045">
-              <caret line="198" column="36" selection-start-line="198" selection-start-column="36" selection-end-line="198" selection-end-column="36" />
+            <state relative-caret-position="561">
+              <caret line="193" column="75" lean-forward="true" selection-start-line="193" selection-start-column="75" selection-end-line="193" selection-end-column="75" />
             </state>
           </provider>
         </entry>
@@ -146,7 +121,60 @@
             <path>
               <item name="vid2vid" type="b2602c69:ProjectViewProjectNode" />
               <item name="vid2vid" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="vid2vid" type="b2602c69:ProjectViewProjectNode" />
+              <item name="vid2vid" type="462c0819:PsiDirectoryNode" />
               <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="vid2vid" type="b2602c69:ProjectViewProjectNode" />
+              <item name="vid2vid" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+              <item name="flownet2_pytorch" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="vid2vid" type="b2602c69:ProjectViewProjectNode" />
+              <item name="vid2vid" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+              <item name="flownet2_pytorch" type="462c0819:PsiDirectoryNode" />
+              <item name="networks" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="vid2vid" type="b2602c69:ProjectViewProjectNode" />
+              <item name="vid2vid" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+              <item name="flownet2_pytorch" type="462c0819:PsiDirectoryNode" />
+              <item name="networks" type="462c0819:PsiDirectoryNode" />
+              <item name="resample2d_package" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="vid2vid" type="b2602c69:ProjectViewProjectNode" />
+              <item name="vid2vid" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+              <item name="flownet2_pytorch" type="462c0819:PsiDirectoryNode" />
+              <item name="networks" type="462c0819:PsiDirectoryNode" />
+              <item name="resample2d_package" type="462c0819:PsiDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="vid2vid" type="b2602c69:ProjectViewProjectNode" />
+              <item name="vid2vid" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+              <item name="flownet2_pytorch" type="462c0819:PsiDirectoryNode" />
+              <item name="networks" type="462c0819:PsiDirectoryNode" />
+              <item name="resample2d_package" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="vid2vid" type="b2602c69:ProjectViewProjectNode" />
+              <item name="vid2vid" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+              <item name="flownet2_pytorch" type="462c0819:PsiDirectoryNode" />
+              <item name="networks" type="462c0819:PsiDirectoryNode" />
+              <item name="resample2d_package" type="462c0819:PsiDirectoryNode" />
+              <item name="resample2d_cuda.egg-info" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="vid2vid" type="b2602c69:ProjectViewProjectNode" />
@@ -497,11 +525,32 @@
       <option name="project" value="LOCAL" />
       <updated>1539959782754</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="test">
+      <created>1540108874769</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1540108874769</updated>
+    </task>
+    <task id="LOCAL-00043" summary="test">
+      <created>1540108923930</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1540108923930</updated>
+    </task>
+    <task id="LOCAL-00044" summary="test">
+      <created>1540109103352</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1540109103352</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1797" y="206" width="2853" height="2045" extended-state="0" />
+    <frame x="1812" y="77" width="2853" height="2045" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24982283" />
@@ -614,6 +663,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/models/vid2vid_model_G.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1023">
+          <caret line="164" column="47" lean-forward="true" selection-start-line="164" selection-start-column="47" selection-end-line="164" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/flownet2_pytorch/networks/resample2d_package/resample2d_cuda.cc">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/flownet2_pytorch/networks/resample2d_package/resample2d_kernel.cu">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1567">
+          <caret line="306" lean-forward="true" selection-start-line="306" selection-end-line="306" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/flownet2_pytorch/networks/resample2d_package/setup.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/flownet2_pytorch/networks/resample2d_package/resample2d.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1287">
+          <caret line="39" column="8" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/download_flownet2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
@@ -631,27 +710,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/vid2vid_model_G.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1023">
-          <caret line="164" column="47" lean-forward="true" selection-start-line="164" selection-start-column="47" selection-end-line="164" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/flownet2_pytorch/networks/resample2d_package/resample2d.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1287">
-          <caret line="39" column="8" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/networks.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1045">
-          <caret line="198" column="36" selection-start-line="198" selection-start-column="36" selection-end-line="198" selection-end-column="36" />
+        <state relative-caret-position="561">
+          <caret line="193" column="75" lean-forward="true" selection-start-line="193" selection-start-column="75" selection-end-line="193" selection-end-column="75" />
         </state>
       </provider>
     </entry>
