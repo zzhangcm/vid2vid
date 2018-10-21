@@ -86,8 +86,9 @@ class CompositeGenerator(nn.Module):
                 norm_layer=nn.BatchNorm2d, padding_type='reflect'):
         assert(n_blocks >= 0)
         super(CompositeGenerator, self).__init__()        
-        self.resample = Resample2d()
-        self.resample_gpuid = 0
+        # self.resample = Resample2d()
+        # self.resample_gpuid = 0
+        self.resamples = {}
         self.n_downsampling = n_downsampling
         self.use_fg_model = use_fg_model
         self.no_flow = no_flow
@@ -190,11 +191,13 @@ class CompositeGenerator(nn.Module):
         else:
             # print("mask2:{}\t@{}".format(mask, mask.get_device()))
             # print("img_prev:{}\t@{}".format(img_prev, img_prev.get_device()))
-            if self.resample_gpuid is None:
-                self.resample_gpuid = gpu_id
-            imgpre_slc = img_prev[:,-3:,...].cuda(self.resample_gpuid)
+            # if self.resample_gpuid is None:
+            #     self.resample_gpuid = gpu_id
+            if gpu_id not in self.resamples:
+                self.resamples[gpu_id] = Resample2d().cuda(gpu_id)
+            imgpre_slc = img_prev[:,-3:,...].cuda(gpu_id)
             # print("imgpre_slc:{}\t@{}".format(imgpre_slc, img_prev.shape))
-            img_warp = self.resample(imgpre_slc, flow.cuda(self.resample_gpuid)).cuda(gpu_id)
+            img_warp = self.resamples[gpu_id](imgpre_slc, flow).cuda(gpu_id)
             # img_warp = self.resample(imgpre_slc, flow)
             # print("img_warp1:{}\t@{}".format(img_warp, img_warp.shape))
             img_warp = img_warp.cuda(gpu_id)
