@@ -87,7 +87,7 @@ class CompositeGenerator(nn.Module):
         assert(n_blocks >= 0)
         super(CompositeGenerator, self).__init__()        
         self.resample = Resample2d()
-        self.resample_gpuid = 0
+        self.resample_gpuid = 1
         self.n_downsampling = n_downsampling
         self.use_fg_model = use_fg_model
         self.no_flow = no_flow
