@@ -193,7 +193,8 @@ class CompositeGenerator(nn.Module):
             imgpre_slc = img_prev[:,-3:,...].cuda(gpu_id)
             print("imgpre_slc:{}\t@{}".format(imgpre_slc, img_prev.shape))
             if gpu_id not in self.resamples:
-                self.resamples[gpu_id] = Resample2d()
+                with torch.cuda.device(gpu_id):
+                    self.resamples[gpu_id] = Resample2d()
             img_warp = self.resamples[gpu_id](imgpre_slc, flow)
             # img_warp = self.resample(imgpre_slc, flow)
             print("img_warp1:{}\t@{}".format(img_warp, img_warp.shape))
