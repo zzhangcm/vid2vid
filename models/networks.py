@@ -87,6 +87,7 @@ class CompositeGenerator(nn.Module):
         assert(n_blocks >= 0)
         super(CompositeGenerator, self).__init__()        
         self.resample = Resample2d()
+        self.resamples = {}
         self.n_downsampling = n_downsampling
         self.use_fg_model = use_fg_model
         self.no_flow = no_flow
@@ -191,8 +192,10 @@ class CompositeGenerator(nn.Module):
             # print("img_prev:{}\t@{}".format(img_prev, img_prev.get_device()))
             imgpre_slc = img_prev[:,-3:,...].cuda(gpu_id)
             print("imgpre_slc:{}\t@{}".format(imgpre_slc, img_prev.shape))
-
-            img_warp = self.resample(imgpre_slc, flow)
+            if gpu_id not in self.resamples:
+                self.resamples[gpu_id] = Resample2d()
+            img_warp = self.resamples[gpu_id](imgpre_slc, flow)
+            # img_warp = self.resample(imgpre_slc, flow)
             print("img_warp1:{}\t@{}".format(img_warp, img_warp.shape))
             img_warp = img_warp.cuda(gpu_id)
             print("img_warp2:{}\t@{}".format(img_warp, img_warp.shape))
