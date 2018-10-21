@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a7a0fa2c-f6e2-4e75-bdda-1d987c0e4c8e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/networks.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/networks.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -65,8 +64,26 @@
       <file leaf-file-name="networks.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/models/networks.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="583">
+            <state relative-caret-position="297">
               <caret line="89" column="31" selection-start-line="89" selection-start-column="31" selection-end-line="89" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="train_g1_512.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/crowd/train_g1_512.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="train_512.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/crowd/train_512.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="33">
+              <caret line="1" lean-forward="true" selection-start-column="29" selection-end-line="1" />
             </state>
           </provider>
         </entry>
@@ -144,42 +161,13 @@
             <path>
               <item name="vid2vid" type="b2602c69:ProjectViewProjectNode" />
               <item name="vid2vid" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-              <item name="flownet2_pytorch" type="462c0819:PsiDirectoryNode" />
-              <item name="networks" type="462c0819:PsiDirectoryNode" />
-              <item name="resample2d_package" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vid2vid" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vid2vid" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-              <item name="flownet2_pytorch" type="462c0819:PsiDirectoryNode" />
-              <item name="networks" type="462c0819:PsiDirectoryNode" />
-              <item name="resample2d_package" type="462c0819:PsiDirectoryNode" />
-              <item name="build" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vid2vid" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vid2vid" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-              <item name="flownet2_pytorch" type="462c0819:PsiDirectoryNode" />
-              <item name="networks" type="462c0819:PsiDirectoryNode" />
-              <item name="resample2d_package" type="462c0819:PsiDirectoryNode" />
-              <item name="dist" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vid2vid" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vid2vid" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-              <item name="flownet2_pytorch" type="462c0819:PsiDirectoryNode" />
-              <item name="networks" type="462c0819:PsiDirectoryNode" />
-              <item name="resample2d_package" type="462c0819:PsiDirectoryNode" />
-              <item name="resample2d_cuda.egg-info" type="462c0819:PsiDirectoryNode" />
+              <item name="scripts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="vid2vid" type="b2602c69:ProjectViewProjectNode" />
               <item name="vid2vid" type="462c0819:PsiDirectoryNode" />
               <item name="scripts" type="462c0819:PsiDirectoryNode" />
+              <item name="crowd" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -238,13 +226,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1539844508607</updated>
-    </task>
-    <task id="LOCAL-00010" summary="test">
-      <created>1539955670855</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1539955670855</updated>
     </task>
     <task id="LOCAL-00011" summary="test">
       <created>1539955731524</created>
@@ -582,7 +563,14 @@
       <option name="project" value="LOCAL" />
       <updated>1540110849648</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="test">
+      <created>1540111249319</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1540111249319</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -746,9 +734,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/crowd/train_512.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="33">
+          <caret line="1" lean-forward="true" selection-start-column="29" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/crowd/train_g1_512.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/models/networks.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="583">
+        <state relative-caret-position="297">
           <caret line="89" column="31" selection-start-line="89" selection-start-column="31" selection-end-line="89" selection-end-column="31" />
         </state>
       </provider>
