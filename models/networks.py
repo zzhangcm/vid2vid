@@ -190,8 +190,6 @@ class CompositeGenerator(nn.Module):
         else:
             # print("mask2:{}\t@{}".format(mask, mask.get_device()))
             # print("img_prev:{}\t@{}".format(img_prev, img_prev.get_device()))
-            if self.resample_gpuid is None:
-                self.resample_gpuid = gpu_id
             imgpre_slc = img_prev[:,-3:,...].cuda(self.resample_gpuid)
             # print("imgpre_slc:{}\t@{}".format(imgpre_slc, img_prev.shape))
             img_warp = self.resample(imgpre_slc, flow.cuda(self.resample_gpuid)).cuda(gpu_id)
@@ -207,7 +205,7 @@ class CompositeGenerator(nn.Module):
             img_fg_feat = self.indv_up(self.indv_res(self.indv_down(input)))
             img_fg = self.indv_final(img_fg_feat)
             mask = mask.cuda(gpu_id).expand_as(img_raw)
-            print("pass mask")
+            # print("pass mask")
             img_final = img_fg * mask + img_final * (1-mask) 
             img_raw = img_fg * mask + img_raw * (1-mask)                 
 
