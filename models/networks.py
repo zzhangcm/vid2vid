@@ -192,12 +192,13 @@ class CompositeGenerator(nn.Module):
             # print("img_prev:{}\t@{}".format(img_prev, img_prev.get_device()))
             if self.resample_gpuid is None:
                 self.resample_gpuid = gpu_id
-            imgpre_slc = img_prev[:,-3:,...].cuda(self.resample_gpuid)
-            print("imgpre_slc:{}\t@{}".format(imgpre_slc, img_prev.shape))
+            imgpre_slc = img_prev[:,-3:,...].cuda(self.gpu_id)
+            # print("imgpre_slc:{}\t@{}".format(imgpre_slc, img_prev.shape))
             img_warp = self.resample(imgpre_slc, flow.cuda(self.resample_gpuid)).cuda(gpu_id)
             # img_warp = self.resample(imgpre_slc, flow)
-            print("img_warp1:{}\t@{}".format(img_warp, img_warp.shape))
-            img_warp = img_warp.cuda(gpu_id)
+            # print("img_warp1:{}\t@{}".format(img_warp, img_warp.shape))
+            img_warp = img_warp.cuda(gpu_id
+                                     )
             # print("img_warp2:{}\t@{}".format(img_warp, img_warp.shape))
             weight_ = weight.expand_as(img_raw)
             img_final = img_raw * weight_ + img_warp * (1-weight_)
